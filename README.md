@@ -2,11 +2,9 @@
 
 Production-ready multi-agent system that designs a **full week of meals** (breakfast, lunch, dinner, snacks) and turns them into a **budget-aware, bulk-optimized grocery plan** — with strict Pydantic schemas end to end.
 
-This project extends single-meal planning into **weekly structured planning** (Exercise 2): `MealType`, `DailyMeals`, `WeeklyMealPlan`, and `WeeklyGroceryPlan`.
+This project extends single-meal planning into **weekly structured planning** (): `MealType`, `DailyMeals`, `WeeklyMealPlan`, and `WeeklyGroceryPlan`.
 
 ---
-
-## Why this is not a toy demo
 
 | Production concern | How this repo addresses it |
 | --- | --- |
@@ -87,7 +85,7 @@ sequenceDiagram
     S-->>U: PlannerResult
 ```
 
-### Domain model map (Exercise 2)
+### Domain model map ()
 
 ```mermaid
 classDiagram
@@ -203,7 +201,7 @@ Structured-Meal-Grocery-Planner-with-CrewAI/
 
 ---
 
-## Exercise 2 — Weekly Pydantic models
+##  — Weekly Pydantic models
 
 Core types live in `src/meal_planner/models/`:
 
@@ -212,7 +210,7 @@ Core types live in `src/meal_planner/models/`:
 - **`WeeklyMealPlan`** — week start, daily meals, themes, prep suggestions (validates week span & unique dates)
 - **`WeeklyGroceryPlan`** — weekly budget, sectioned shopping list, bulk items, tips, daily budget breakdown
 
-Minimal example (same shape as the course exercise):
+Minimal example (same shape as the course ):
 
 ```python
 from meal_planner.models import DailyMeals, MealPlan, WeeklyMealPlan
@@ -351,7 +349,7 @@ pytest --cov=meal_planner --cov-report=term-missing
 
 Coverage includes:
 
-- Exercise 2 sample `WeeklyMealPlan`
+-  sample `WeeklyMealPlan`
 - Full 7-day / multi-meal-type validation
 - Grocery aggregation, bulk flags, budget breakdown
 - Offline `PlannerService` end-to-end
