@@ -218,10 +218,10 @@ Minimal example (same shape as the course exercise):
 from meal_planner.models import DailyMeals, MealPlan, WeeklyMealPlan
 
 sample_weekly_plan = WeeklyMealPlan(
-    week_start_date="2024-01-15",
+    week_start_date="2026-07-29",
     daily_meals=[
         DailyMeals(
-            date="2024-01-15",
+            date="2026-07-29",
             breakfast=MealPlan(
                 meal_name="Oatmeal",
                 difficulty_level="Easy",
@@ -279,7 +279,7 @@ meal-planner plan --week-start 2024-01-15 --budget 150 --offline
 
 ```bash
 meal-planner plan \
-  --week-start 2024-01-15 \
+  --week-start 2026-07-29 \
   --budget 150 \
   --household-size 2 \
   --diet vegetarian \
@@ -297,7 +297,7 @@ uvicorn meal_planner.api.app:app --reload
 curl -s -X POST 'http://127.0.0.1:8000/v1/plans/weekly?use_llm=false' \
   -H 'Content-Type: application/json' \
   -d '{
-    "week_start_date": "2024-01-15",
+    "week_start_date": "2026-07-29",
     "household_size": 2,
     "weekly_budget": 150,
     "dietary_constraints": ["vegetarian"],
