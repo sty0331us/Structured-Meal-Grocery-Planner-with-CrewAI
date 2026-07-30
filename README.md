@@ -272,7 +272,7 @@ cp .env.example .env
 ### 2. Offline plan (no LLM — great for demos / CI)
 
 ```bash
-meal-planner plan --week-start 2024-01-15 --budget 150 --offline
+meal-planner plan --week-start 2026-07-29 --budget 150 --offline
 ```
 
 ### 3. Full CrewAI plan
