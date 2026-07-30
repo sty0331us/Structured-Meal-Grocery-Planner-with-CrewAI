@@ -1,0 +1,35 @@
+research_weekly_meals:
+  description: >
+    Research meals for a household of {household_size} people starting the week
+    of {week_start_date}. Respect dietary constraints: {dietary_constraints}.
+    Cuisine preferences: {cuisine_preferences}. Banned ingredients: {banned_ingredients}.
+    Required meal types per day: {meals_per_day}. Include snacks: {include_snacks}.
+    Prep preference: {prep_time_preference}. Weekly budget context: {currency} {weekly_budget}.
+    Propose varied breakfast, lunch, and dinner options that share staple ingredients
+    where sensible so grocery consolidation is possible.
+  expected_output: >
+    A detailed research brief listing candidate meals by meal type, with short
+    ingredient lists, difficulty, and notes on leftover / prep friendliness.
+
+design_weekly_meal_plan:
+  description: >
+    Using the research brief, produce a complete WeeklyMealPlan for week_start_date
+    {week_start_date}. Include up to 7 DailyMeals entries. Each day should populate
+    breakfast, lunch, and dinner when requested. Add weekly_themes and
+    prep_suggestions. Household size: {household_size}. Dietary constraints:
+    {dietary_constraints}. Output must validate against the WeeklyMealPlan schema.
+  expected_output: >
+    Valid WeeklyMealPlan JSON covering the planning week with themes and prep tips.
+  output_pydantic: meal_planner.models.weekly.WeeklyMealPlan
+
+build_weekly_grocery_plan:
+  description: >
+    Given the finalized WeeklyMealPlan, build a WeeklyGroceryPlan for budget
+    {currency} {weekly_budget}. Aggregate ingredients across all daily meals,
+    organize shopping_sections by store aisle, identify bulk_items, create a
+    daily budget_breakdown, and provide shopping_tips. Use available tools for
+    bulk optimization and budget compliance. Enable bulk optimization:
+    {enable_bulk_optimization}.
+  expected_output: >
+    Valid WeeklyGroceryPlan JSON with sections, bulk items, tips, and budget fields.
+  output_pydantic: meal_planner.models.weekly.WeeklyGroceryPlan
