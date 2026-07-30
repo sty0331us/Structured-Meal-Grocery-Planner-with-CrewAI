@@ -1,0 +1,34 @@
+{
+  "week_start_date": "2024-01-15",
+  "daily_meals": [
+    {
+      "date": "2024-01-15",
+      "breakfast": {
+        "meal_name": "Oatmeal",
+        "meal_type": "breakfast",
+        "difficulty_level": "Easy",
+        "servings": 2,
+        "researched_ingredients": ["oats", "milk", "berries"]
+      },
+      "lunch": {
+        "meal_name": "Salad",
+        "meal_type": "lunch",
+        "difficulty_level": "Easy",
+        "servings": 2,
+        "researched_ingredients": ["lettuce", "tomatoes", "dressing"]
+      },
+      "dinner": {
+        "meal_name": "Pasta",
+        "meal_type": "dinner",
+        "difficulty_level": "Medium",
+        "servings": 2,
+        "researched_ingredients": ["pasta", "sauce", "cheese"]
+      },
+      "snacks": null
+    }
+  ],
+  "weekly_themes": ["Italian Monday", "Taco Tuesday"],
+  "prep_suggestions": ["Wash vegetables on Sunday", "Cook grains in bulk"],
+  "household_size": 2,
+  "dietary_constraints": []
+}
